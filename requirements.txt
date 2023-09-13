@@ -1,0 +1,15 @@
+Cython==0.29.21
+librosa==0.8.0
+matplotlib==3.7.1
+numpy==1.23.5
+phonemizer==2.2.1
+scipy==1.11.2
+tensorboard==2.3.0
+Unidecode==1.1.1
+torch==1.13.1
+torchvision==0.14.1
+zhon
+jieba
+pypinyin
+cn2an
+gradio
