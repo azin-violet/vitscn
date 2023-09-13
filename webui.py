@@ -39,6 +39,7 @@ def main():
   parser = argparse.ArgumentParser()
   parser.add_argument('-c', '--config', type=str, required=True, help='JSON file for configuration')
   parser.add_argument('-m', '--model', type=str, required=True, help='Model path')
+  parser.add_argument('--share', action='store_true', help='share link')
   args = parser.parse_args()
 
   hps = utils.get_hparams_from_file(args.config)
@@ -87,8 +88,8 @@ def main():
               converted_audio = gr.Audio(label='converted audio')
           btn = gr.Button("Convert")
           btn.click(vc_fn, inputs=[source_speaker, target_speaker, record_audio, upload_audio], outputs=[message_box, converted_audio])
-#   app.launch(share=False, server_name="0.0.0.0", server_port=7860)
-  app.launch(share=False)
+#   app.launch(share=args.share, server_name="0.0.0.0", server_port=7860)
+  app.launch(share=args.share)
 
 def create_tts_fn(model, hps):
     def tts_fn(text, speaker, language):
