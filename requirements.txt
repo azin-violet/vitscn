@@ -6,8 +6,8 @@ phonemizer==2.2.1
 scipy==1.11.2
 tensorboard==2.3.0
 Unidecode==1.1.1
-torch==1.13.1
-torchvision==0.14.1
+torch
+torchvision
 zhon
 jieba
 pypinyin
