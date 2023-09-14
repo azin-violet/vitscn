@@ -9,6 +9,7 @@ Unidecode==1.1.1
 torch
 torchvision
 zhon
+ffmpeg
 jieba
 pypinyin
 cn2an
